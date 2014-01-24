@@ -1,0 +1,10 @@
+clc
+clear all
+x(1)= 0.75;
+v(1)= 1.50;
+delta = 0.85;
+for i=[1:0.5:5];
+    t= i*delta;
+    x= x(1)+t;
+    V= v(1)+x
+end 
