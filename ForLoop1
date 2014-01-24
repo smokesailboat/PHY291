@@ -1,0 +1,7 @@
+clc
+clear all
+x=5;
+delta = 2;
+for n=[1:10];
+    x=(x+1)*delta
+end
