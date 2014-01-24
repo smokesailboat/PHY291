@@ -1,0 +1,15 @@
+clc
+clear all
+K = [4.000; 0.500; 0.980; 0.500; 0.500; 0.128; 0.128; 0.128; 0.500; 0.128];
+% Vaules for k.
+L = [20; 10; 14; 10; 10; 8; 8; 8; 10; 8];
+% Vaules for the length of each pipe.
+G = (K./L);
+% Conductance of each pipe.
+P = 10;
+% Pressure at the tank.
+Q = G.*P;
+% Flow Rate of each pipe.
+J = [ P-Q(1,1)-Q(2,1)-Q(3,1)-Q(4,1); P-Q(2,1)-Q(9,1)-Q(10,1); P-Q(4,1)-Q(6,1)-Q(5,1); P-Q(9,1)+Q(3,1)+Q(5,1)-Q(7,1)-Q(8,1)];
+% Pressure at each juntion
+J 
